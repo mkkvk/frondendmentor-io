@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+}
+* , *::before , *::after{
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    letter-spacing: .1em;
+    line-height: 1.4em;
+}
+
+.cards{
+    font-size:15px;
+    width: 1125px;
+    height: 600px;
+    background-color: hsla(0, 0%, 80%, 0.4);
+    display:grid;
+    align-items: center;
+
+}
+.card-container{
+    display:grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 900px;
+    height: 450px;
+    margin:0 auto;
+}
+.card-1{
+    background-color: var(--orange);
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+}
+.card-2{
+    background-color: var(--cyan);
+}
+.card-3{
+    background-color: var(--dark-cyan);
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+.content{
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 25px;
+}
+.content img{
+    width: 44px;
+    height: 32px;
+}
+.content h2{
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.content p{
+    color: hsla(0, 0%, 90%, 0.856);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    
+}
+button{
+    width: 120px;
+    color: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+.b1:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--orange);
+}
+.b2:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--cyan);
+}
+.b3:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--dark-cyan);
+}
+
+@media (max-width:375px){
+    
+    .cards{
+        width: 100vw;
+        height: 100vh;
+    }
+    .card-container{
+        width:  100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .content{
+        width:  100vw;
+        height: 100vh;
+        margin:auto;
+        border-radius: 0;
+        display: flex;
+        flex-flow:column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        row-gap: 30px;
+        padding: 0px 35px 0px 25px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory ;
+        scroll-snap-align: start;
+    }
+    
+}
+
