@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Outfit:wght@300;400;600&display=swap');
+
+
+:root{
+    --primary-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+* , *::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    width: 1440px;
+    height: 1056px;
+    font-size: 18px;
+    background-color: hsl(217, 54%, 11%);
+}
+.content{
+    background-color: hsl(216, 50%, 16%);
+    width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 10px px 0px 20px rgba(8, 17, 29, 0.878) ,  
+    0px 10px 0px 20px rgba(8, 17, 29, 0.878), 
+    -10px 0px 0px 20px rgba(8, 17, 29, 0.878), 
+    0px -10px 0px 20px rgba(8, 17, 29, 0.878);
+}
+.hover{
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.hover img{ 
+    border-radius: 10px;
+}
+.i1{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.i2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    visibility: hidden;
+}
+h2{
+    font-weight: 600;
+    color: #fff;
+    font-size: 2em;
+    margin: 40px 0px;
+}
+p{
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.5em;
+    opacity: .6;
+    margin-bottom: 40px;
+}
+.a1{
+    display:inline-flex;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.a1 #eth{
+    color: var(--Cyan);
+    font-size: 26px;
+    font-weight: 600;
+    
+}
+.a1 #eth::before{
+    content:'' ;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(../images/icon-ethereum.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 10px;
+    vertical-align: -4px;
+}
+.a1 #day{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+    opacity: .6;
+    margin-left: auto;
+}
+.a1 #day::before{
+    content:'' ;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../images/icon-clock.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 10px;
+    vertical-align: -2px;
+}
+.a2{
+    display:inline-flex;
+    padding: 15px 0px;
+    border-top: 1px solid hsl(215, 32%, 27%) ;
+    margin-top: 10px;
+}
+.a2 img{
+    width: 88px;
+}
+.a2 span{
+    align-self: center;
+    margin-left: 40px;
+    font: size 1.5em;
+    color: rgba(255, 255, 255, 0.76);
+}
+.a2 span a[href]{
+    color: #fff;
+    font: size 1.5em;;
+    opacity: 1 ;
+}
+#name:hover , h2:hover{
+    cursor: crosshair;
+    color: var(--Cyan);
+} 
+
+/* ı cant do cyan background when ı'm hovering on img with mouse */
+
+a:hover .i1{
+    cursor: crosshair;
+    opacity: .3;
+    /* stroke-opacity: var(--Cyan);
+    fill-opacity: var(--Cyan);
+    flood-opacity: var(--Cyan); */
+    background: var(--Cyan) url(./images/image-equilibrium.jpg) no-repeat fixed center;
+}
+a:hover .i2{
+    visibility: visible;
+}
+
+@media (max-width:375px) {
+    *{
+        max-width: 375px;
+        font-size: 12px;
+    }
+    
+    body{
+        height: 670px;
+    }
+    .content + a , .i1 {
+        height: 350px;
+    }
+    h2{
+        
+        margin: 10px 0;
+    }
+    p{
+        margin-top: 20px;
+        line-height: 1.5em;
+    }
+}
